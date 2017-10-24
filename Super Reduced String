@@ -1,0 +1,47 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <string.h>
+#include <algorithm>
+using namespace std;
+void reduced(char[], int);
+int main() 
+{
+    char arr[100];
+     cin>>arr;
+    int l;
+     l=strlen(arr);
+    reduced(arr,l);
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+    return 0;
+}
+
+void reduced(char arr[] , int l)
+    {
+     int i,j,k,p;
+     for(i=0;i<l-1;i++)
+         {
+            if(arr[i]==arr[i+1])
+                {
+                j=i+2;
+                    for(k=1;k<=2;k++)
+                        {
+                            for(p=j;p<l;p++)
+                                arr[p-1]=arr[p];
+                            j--;
+                            l--;
+                        }
+                i-=2;
+                }
+            
+        }
+    if(l==0)
+        cout<<"Empty String";
+    else
+        {
+         for(i=0;i<l;i++)
+             cout<<arr[i];
+    }  
+}
