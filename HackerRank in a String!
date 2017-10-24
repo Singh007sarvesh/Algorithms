@@ -1,0 +1,46 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+    int t,i,l;
+    char str[10000000];
+    cin>>t;
+    while(t--)
+    {
+        getchar();
+        cin>>str;
+        char str1[]="hackerrank";
+        int l1=strlen(str1);
+        l=strlen(str);
+        int c=0,j,x=0,c1=0,c2=0;
+        for(j=0;j<l1;j++)
+        {
+            x=x+c1;
+            c1=0;
+            for(i=x;i<l;i++)
+            {
+                c2++;
+                if(str1[j]==str[i])
+                {
+                    c++;
+                    break;
+                }
+               else
+                   c1++;
+                
+            }
+          //cout<<c<<" ";
+            if(c==l1)
+                break;
+                if(c2==l)
+                {
+                    
+                    break;
+                }
+        }
+        if(c==l1)
+            cout<<"YES\n";
+        else
+            cout<<"NO\n";
+    }
+    return 0;
+}
