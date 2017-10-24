@@ -1,0 +1,28 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+    char str[100000];
+    cin.getline(str,sizeof(str));
+    long long l=strlen(str);
+    int i;
+    set<char>s;
+    set<char>::iterator it;
+    for(i=0;i<l;i++)
+    {
+        if(str[i]!=' ')
+        {
+            if(str[i]>=65 && str[i]<=90)
+            {
+                str[i]=str[i]+32;
+            }
+            s.insert(str[i]);
+        }
+    }
+    int c=26;
+    int x=s.size();
+    if(c==x)
+       cout<<"pangram";
+   else
+       cout<<"not pangram";
+    return 0;
+}
