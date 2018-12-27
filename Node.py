@@ -48,14 +48,14 @@ class linked_list:
 		right.next = pre
 if __name__ == '__main__':
 	linkedlist = linked_list()
-	linkedlist.insert(2)
-	linkedlist.insert(3)
-	linkedlist.insert(4)
-	linkedlist.insert(5)
-	linkedlist.insert(6)
+	n = int(input())
+	for i in range(n):
+		data = int(input())
+		linkedlist.insert(data)
 	linkedlist.disp()
-	linkedlist.delete_node(2)
-	linkedlist.delete_node(4)
+	data = int(input())
+	print()
+	linkedlist.delete_node(data)
 	print()
 	linkedlist.disp()
 		
