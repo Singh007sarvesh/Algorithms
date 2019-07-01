@@ -32,9 +32,9 @@ class BinaryTree:
 					temp.right = node
 					break
 				else:
-					if len(queue) == 0:
-						queue.append(temp.left);
-						queue.append(temp.right);
+					# if len(queue) == 0:
+					queue.append(temp.left);
+					queue.append(temp.right);
 
 	def preOrder(self, root):
 
